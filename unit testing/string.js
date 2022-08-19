@@ -5,9 +5,26 @@ export default function stringLength (str) {
   }
 }
 
-const reverseString = (str) => {
+export const reverseString = (str) => {
   return str.split('').reverse().join('')
 }
 
-console.log(reverseString('hello'))
-export { reverseString }
+class Calculator {
+  add (num1, num2) {
+    return num1 + num2
+  }
+
+  subtract (num1, num2) {
+    return num1 - num2
+  }
+
+  multiply (num1, num2) {
+    return num1 * num2
+  }
+
+  divide (num1, num2) {
+    return parseInt(num1 / num2)
+  }
+}
+
+export const calculator = new Calculator()
