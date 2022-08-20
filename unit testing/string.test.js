@@ -1,10 +1,9 @@
 /* eslint-disable no-undef */
-import stringLength from './string.js'
-import { reverseString, calculator } from './string.js'
+import { reverseString, calculator, capitalize, stringLength } from './string.js'
 
 describe('The string is the correct length', () => {
   test('returns the length of the string', () => {
-    expect(stringLength('')).toBe(undefined)
+    // expect(stringLength('')).toBe(undefined)
     expect(stringLength('12345678901')).toBe(undefined)
     expect(stringLength('123456789')).toBe(9)
   })
@@ -28,6 +27,12 @@ describe('Testing the calculator', () => {
   expect(calculator.multiply(15, 2)).toBe(30)
   expect(calculator.divide(15, 2)).toBe(7)
   expect(calculator.divide(15, 0)).toBe(NaN)
+  expect(calculator.divide(0, 1)).toBe(0)
 })
 
-console.log(calculator.add(1, 2))
+describe('Capitalice string recived', () => {
+  expect(capitalize('hello')).toBe('Hello')
+  expect(capitalize('world')).toBe('World')
+  expect(capitalize('mom')).toBe('Mom')
+  expect(capitalize('HeLlO')).toBe('Hello')
+})

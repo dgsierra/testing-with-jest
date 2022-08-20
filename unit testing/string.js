@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-export default function stringLength (str) {
+export const stringLength = (str) => {
   if (str.length < 10 && str.length > 1) {
     return str.length
   }
@@ -28,3 +28,7 @@ class Calculator {
 }
 
 export const calculator = new Calculator()
+
+export const capitalize = (str) => {
+  return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase()
+}
