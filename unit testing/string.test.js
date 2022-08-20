@@ -1,13 +1,14 @@
 /* eslint-disable no-undef */
 import { reverseString, calculator, capitalize, stringLength } from './string.js'
-
+// Setup the test runner
+// Task 1:
 describe('The string is the correct length', () => {
   test('returns the length of the string', () => {
     // expect(stringLength('')).toBe(undefined)
     expect(stringLength('12345678901')).toBe(undefined)
     expect(stringLength('123456789')).toBe(9)
   })
-
+  // Task 2:
   test('check for the reverse of the string', () => {
     expect(reverseString('hello')).toBe('olleh')
     expect(reverseString('hello world')).toBe('dlrow olleh')
@@ -20,7 +21,7 @@ describe('The string is the correct length', () => {
     expect(reverseString('mom')).toBe('mom')
   })
 })
-
+// Task3:
 describe('Testing the calculator', () => {
   expect(calculator.add(1, 2)).toBe(3)
   expect(calculator.subtract(1, 2)).toBe(-1)
@@ -29,7 +30,7 @@ describe('Testing the calculator', () => {
   expect(calculator.divide(15, 0)).toBe(NaN)
   expect(calculator.divide(0, 1)).toBe(0)
 })
-
+// Task 4:
 describe('Capitalice string recived', () => {
   expect(capitalize('hello')).toBe('Hello')
   expect(capitalize('world')).toBe('World')
