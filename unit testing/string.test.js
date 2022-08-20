@@ -1,4 +1,4 @@
-/* eslint-disable import/no-duplicates */
+/* eslint-disable no-undef */
 import stringLength from './string.js'
 import { reverseString, calculator } from './string.js'
 
@@ -20,6 +20,14 @@ describe('The string is the correct length', () => {
     expect(reverseString('hello world')).toBe('dlrow olleh')
     expect(reverseString('mom')).toBe('mom')
   })
+})
+
+describe('Testing the calculator', () => {
+  expect(calculator.add(1, 2)).toBe(3)
+  expect(calculator.subtract(1, 2)).toBe(-1)
+  expect(calculator.multiply(15, 2)).toBe(30)
+  expect(calculator.divide(15, 2)).toBe(7)
+  expect(calculator.divide(15, 0)).toBe(NaN)
 })
 
 console.log(calculator.add(1, 2))
